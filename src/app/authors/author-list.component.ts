@@ -7,7 +7,12 @@ import authors from './author.model';
             <div>
               current selected user: {{currentAuthor?.firstName}} {{currentAuthor?.lastName}}
             </div>
+            <div class="box" [class.box-red]="isDanger" [class.yellow-background]="isWarning"></div>
+            <button (click)="isDanger = !isDanger">Toggler Danger</button>
+            <br/>
+            <button (click)="isWarning = !isWarning">Toggler Warning</button>
   `,
+  styleUrls: ['./author.css'],
 })
 export default class AuthorListComponent {
   authors = authors;
@@ -15,4 +20,6 @@ export default class AuthorListComponent {
   onSelected(e) {
     this.currentAuthor = e;
   }
+  isDanger = false;
+  isWarning = false;
 }
