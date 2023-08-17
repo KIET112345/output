@@ -1,0 +1,4 @@
+<hello [style.color]="'red'" name="{{ name }}"></hello>
+<hello [style]="{ color: 'yellow', fontSize: '2em' }" name="{{ name }}"></hello>
+
+<input [ngModel]="name" (ngModelChange)="name = $event" />
