@@ -6,3 +6,7 @@ const authors = [
   { firstName: 'E', lastName: 'EE' },
 ];
 export default authors;
+export interface Author {
+  firstName: string;
+  lastName: string;
+}
